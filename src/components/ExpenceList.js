@@ -7,7 +7,7 @@ const ExpenceList = ({ data, deleteExpence, incomes }) => {
   useEffect(() => {}, [data, incomes]);
   const removeItem = (id) => {
     deleteExpence(id);
-    console.log(id);
+  
   };
   let income = 0;
   for (var item of incomes) {
@@ -18,7 +18,7 @@ const ExpenceList = ({ data, deleteExpence, incomes }) => {
 
   return (
     <div className="expence_list">
-      <p>E{data.description}</p>
+      <p>{data.description}</p>
       <p>
         <span style={{ fontSize: "20px" }}>{data.value}</span>
         <span style={{ fontSize: "10px" }}>
